@@ -2,8 +2,6 @@
 #
 # stop-stack.sh
 #
-# inmate40207 ELK Starter shutdown script
-#
 # stops the base software stack under docker
 #
 

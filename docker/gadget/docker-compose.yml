@@ -3,9 +3,12 @@ services:
   kafka:
     build: kafka/
     environment:
-      # TODO: change advertised host to enumerated host IP
-      - ADVERTISED_HOST=10.0.1.15
+      - LOG_RETENTION_HOURS=1
+      - LOG_RETENTION_BYTES=1073741824
+      - NUM_PARTITIONS=1
+      - DELETE_TOPIC_ENABLE=true
       - ADVERTISED_PORT=9092
+    env_file: .env
     ports:
       - "2181:2181"
       - "9092:9092"
